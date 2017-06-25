@@ -2,10 +2,11 @@
 
 $connect=mysqli_connect("localhost","root","123qwe","test") or die("unable to connect");
 
-if(isset($_GET['id'])){
+/*$id=$_GET['id'];
 
-	$id=$_GET['id'];
-	$sql="SELECT * FROM student WHERE id=".$id;
+if(isset($id){
+
+*/	$sql="SELECT * FROM student WHERE id="$_GET['id'];
 
 	$result=mysqli_query($connect,$sql);
 
@@ -17,9 +18,10 @@ if(isset($_GET['id'])){
 	else(
 		echo "without this id";
 	)
+		/*
 }
 else{
 	echo "get id error";
 }
-
+*/
 ?>
