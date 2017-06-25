@@ -1,21 +1,15 @@
 <?php 
 
-$con=mysqli_connect("localhost","root","123qwe");
-
-if (!$con) {	
-	die ('connect error:'.mysql_error());
-}
-
-$db_selectd=mysql_select_db("test",$con);
+$connect=mysqli_connect("localhost","root","123qwe","test") or die("unable to connect");
 
 if(isset($_GET['id'])){
 
 	$id=$_GET['id'];
 	$sql="SELECT * FROM student WHERE id=".$id;
 
-	$result=mysql_query($sql,$con);
+	$result=mysqli_query($connect,$sql);
 
-	if ($row=mysql_fetch_assoc($result)) {		
+	if ($row=mysqli_fetch_assoc($result)) {		
 		echo "id:".$row["id"]."</br>";
 		echo "name:".$row["name"]."</br>";
 		echo "score:".$row["score"]."</br>";
@@ -28,6 +22,4 @@ else{
 	echo "get id error";
 }
 
-mysql_close($con);
- 
 ?>
