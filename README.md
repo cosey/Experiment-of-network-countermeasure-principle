@@ -1,6 +1,9 @@
 # Experiment-of-network-countermeasure-principle
 Course experiment of network countermeasure principle.
 
+数据表 student，包含 id、name、score 三列
+带有 sql 注入漏洞的接口程序，包含：
+
 1 根据输入的参数值，拼接 SQL 查询语句并执行，将查询结果展示。如根据输入的学号展示姓名和分数。
 
 2 根据输入的参数值，拼接 SQL 查询语句并执行，展示查询结果是否为空。如输入学号，展示是否有该学生存在。
