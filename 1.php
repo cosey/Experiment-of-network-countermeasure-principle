@@ -2,20 +2,15 @@
 
 $connect=mysqli_connect("localhost","root","123qwe","test") or die("unable to connect");
 
-$id=$_GET['id'];
+$sql="SELECT * FROM student WHERE id=".$_GET['id'];
 
-if(isset($id){
+$result=mysqli_query($connect,$sql);
 
-	$sql="SELECT * FROM student WHERE id=".$id;
+if ($row=mysqli_fetch_assoc($result)) {	
 
-	$result=mysqli_query($connect,$sql);
-
-	if ($row=mysqli_fetch_assoc($result)) {	
-
-		echo "id:".$row["id"]."</br>";
-		echo "name:".$row["name"]."</br>";
-		echo "score:".$row["score"]."</br>";
-	}
+	echo "id:".$row["id"]."</br>";
+	echo "name:".$row["name"]."</br>";
+	echo "score:".$row["score"]."</br>";
 }
 
 ?>
