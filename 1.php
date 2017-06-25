@@ -10,14 +10,12 @@ if(isset($id){
 
 	$result=mysqli_query($connect,$sql);
 
-	if ($row=mysqli_fetch_assoc($result)) {		
+	if ($row=mysqli_fetch_assoc($result)) {	
+
 		echo "id:".$row["id"]."</br>";
 		echo "name:".$row["name"]."</br>";
 		echo "score:".$row["score"]."</br>";
 	}
-}
-else{
-	echo "get id error";
 }
 
 ?>
