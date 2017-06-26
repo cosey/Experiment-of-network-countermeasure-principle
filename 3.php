@@ -1,10 +1,10 @@
 <?php 
 
 function randomnum(){	
-	$numbers = range (0,9); 
+	$numbers = mt_rand(100000,999999); 
 	shuffle ($numbers);
-	$randnum = array_slice($numbers,0,6); 
-	return $randnum;
+	//$randnum = array_slice($numbers,0,6); 
+	return $numbers;
 }
 
 $connect=mysqli_connect("localhost","root","123qwe","test") or die("unable to connect");
