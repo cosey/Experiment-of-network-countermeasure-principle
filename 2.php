@@ -5,12 +5,12 @@ $connect=mysqli_connect("localhost","root","123qwe","test") or die("unable to co
 $sql="SELECT * FROM student WHERE id=".$_GET['id'];
 
 $result=mysqli_query($connect,$sql);
-
-if ($row=mysqli_fetch_assoc($result)) {	
+$row=mysqli_fetch_assoc($result);
+if ($row) {	
 	echo "this id exits.";
 }
 else{
-	echo "this id doesnot exit."
+	echo "this id doesnot exit.";
 }
 
 ?>

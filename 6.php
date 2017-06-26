@@ -19,7 +19,8 @@ echo "id:".$id."</br>";
 $Oldscore=SearchId($id);
 echo "Old score:".$Oldscore."</br>";
 
-$sqlN="UPDATE student SET score=".$_GET['score']."WHERE id=".$id;
+$sqlN="UPDATE student SET score=".$_GET['score']." WHERE id=".$id;
+//echo $sqlN."</br>";
 echo "New score:".$_GET['score']."</br>";
 
 mysqli_query($connect,$sqlN);
